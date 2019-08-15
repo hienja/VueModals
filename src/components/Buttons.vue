@@ -8,6 +8,12 @@
       <v-btn @click="onConfirm">
         Confirm
       </v-btn>
+      <v-btn @click="onAlert">
+        Alert
+      </v-btn>
+      <v-btn @click="onMessage">
+        Message
+      </v-btn>
     </v-layout>
   </v-container>
 </template>
@@ -21,6 +27,11 @@ export default {
     },
     onAlert () {
       this.$modal.show('alert')
+    },
+    onMessage () {
+      this.$modal.show('message', {
+        message: 'I need a massage.'
+      })
     }
   }
 }
