@@ -1,15 +1,15 @@
 <template>
-    <modal name="confirm" height="auto">
+    <modal name="alert" height="auto">
         <v-card>
+            <v-card-title>
+                Alert!
+            </v-card-title>
             <v-card-text>
-                Do you wish to confirm?
+                You're not doing enough squats!
             </v-card-text>
             <v-card-actions>
-                <v-btn @click="onReject">
-                    No
-                </v-btn>
                 <v-btn @click="onAccept">
-                    Yes
+                    Okay
                 </v-btn>
             </v-card-actions>
         </v-card>
@@ -19,11 +19,8 @@
 <script>
 export default {
   methods: {
-    onReject () {
-      this.$modal.hide('confirm')
-    },
     onAccept () {
-      this.$modal.show('alert')
+      this.$modal.hide('alert')
     }
   }
 }

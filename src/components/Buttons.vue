@@ -17,8 +17,10 @@ export default {
   data: () => ({}),
   methods: {
     onConfirm () {
-      console.log('confirm')
       this.$modal.show('confirm')
+    },
+    onAlert () {
+      this.$modal.show('alert')
     }
   }
 }
