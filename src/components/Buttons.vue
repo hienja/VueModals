@@ -14,6 +14,9 @@
       <v-btn @click="onMessage">
         Message
       </v-btn>
+      <v-btn @click="onDialog">
+        V-Dialog
+      </v-btn>
     </v-layout>
   </v-container>
 </template>
@@ -31,6 +34,26 @@ export default {
     onMessage () {
       this.$modal.show('message', {
         message: 'I need a massage.'
+      })
+    },
+    onDialog () {
+      this.$modal.show('dialog', {
+        title: 'Alert!',
+        text: 'You are too awesome',
+        buttons: [
+          {
+            title: 'Deal with it',
+            handler: () => { alert('Woot!') }
+          },
+          {
+            title: '',
+            default: true,
+            handler: () => {}
+          },
+          {
+            title: 'Close'
+          }
+        ]
       })
     }
   }

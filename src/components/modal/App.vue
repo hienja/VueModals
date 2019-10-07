@@ -1,5 +1,6 @@
 <template>
     <v-container>
+        <v-dialog/>
         <Confirm/>
         <Alert/>
         <Message/>
